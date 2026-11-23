@@ -1,0 +1,677 @@
+{
+  "version": 1,
+  "name": "Imported from Wokwi",
+  "parts": [
+    {
+      "id": "uno",
+      "type": "uno",
+      "props": {},
+      "x": 520,
+      "y": 480,
+      "rot": 90
+    },
+    {
+      "id": "ntc1",
+      "type": "ntcmodule",
+      "props": {
+        "temperature": 24,
+        "beta": 3950
+      },
+      "x": 700,
+      "y": 240,
+      "rot": 0
+    },
+    {
+      "id": "lcd1",
+      "type": "lcd1602i2c",
+      "props": {
+        "address": 39
+      },
+      "x": 640,
+      "y": 980,
+      "rot": 0
+    },
+    {
+      "id": "pot1",
+      "type": "potentiometer",
+      "props": {},
+      "x": 500,
+      "y": 420,
+      "rot": 0
+    },
+    {
+      "id": "bb1",
+      "type": "breadboard-half",
+      "props": {},
+      "x": 1060,
+      "y": 400,
+      "rot": 0
+    },
+    {
+      "id": "led1",
+      "type": "led",
+      "props": {
+        "color": "green"
+      },
+      "x": 1220,
+      "y": 400,
+      "rot": 0
+    },
+    {
+      "id": "led2",
+      "type": "led",
+      "props": {
+        "color": "red"
+      },
+      "x": 1520,
+      "y": 400,
+      "rot": 0
+    },
+    {
+      "id": "bz1",
+      "type": "piezo",
+      "props": {},
+      "x": 280,
+      "y": 900,
+      "rot": 180
+    },
+    {
+      "id": "relay1",
+      "type": "relay",
+      "props": {
+        "trigger": "high"
+      },
+      "x": 80,
+      "y": 580,
+      "rot": 270
+    },
+    {
+      "id": "btn1",
+      "type": "pushbutton",
+      "props": {
+        "bounce": "typical"
+      },
+      "x": 300,
+      "y": 340,
+      "rot": 180
+    },
+    {
+      "id": "r3",
+      "type": "resistor",
+      "props": {
+        "value": 220
+      },
+      "x": 1180,
+      "y": 440,
+      "rot": 0
+    },
+    {
+      "id": "r4",
+      "type": "resistor",
+      "props": {
+        "value": 220
+      },
+      "x": 1480,
+      "y": 440,
+      "rot": 0
+    }
+  ],
+  "wires": [
+    {
+      "id": "w1",
+      "from": "btn1:1a",
+      "to": "uno:2",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 440,
+          "y": 440
+        },
+        {
+          "x": 440,
+          "y": 420
+        },
+        {
+          "x": 1060,
+          "y": 420
+        },
+        {
+          "x": 1060,
+          "y": 840
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "from": "btn1:2a",
+      "to": "uno:GND",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 260,
+          "y": 440
+        },
+        {
+          "x": 260,
+          "y": 540
+        },
+        {
+          "x": 1220,
+          "y": 540
+        },
+        {
+          "x": 1220,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "from": "bz1:1",
+      "to": "uno:GND",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 340,
+          "y": 880
+        },
+        {
+          "x": 1100,
+          "y": 880
+        },
+        {
+          "x": 1100,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w4",
+      "from": "bz1:2",
+      "to": "uno:9",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 300,
+          "y": 240
+        },
+        {
+          "x": 1060,
+          "y": 240
+        },
+        {
+          "x": 1060,
+          "y": 680
+        }
+      ]
+    },
+    {
+      "id": "w5",
+      "from": "lcd1:GND",
+      "to": "uno:GND",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 800,
+          "y": 940
+        },
+        {
+          "x": 1220,
+          "y": 940
+        },
+        {
+          "x": 1220,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w6",
+      "from": "lcd1:VCC",
+      "to": "uno:5V",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 820,
+          "y": 900
+        },
+        {
+          "x": 800,
+          "y": 900
+        },
+        {
+          "x": 800,
+          "y": 940
+        },
+        {
+          "x": 460,
+          "y": 940
+        },
+        {
+          "x": 460,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w7",
+      "from": "lcd1:SCL",
+      "to": "uno:A5",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 860,
+          "y": 820
+        },
+        {
+          "x": 540,
+          "y": 820
+        },
+        {
+          "x": 540,
+          "y": 780
+        }
+      ]
+    },
+    {
+      "id": "w8",
+      "from": "lcd1:SDA",
+      "to": "uno:A4",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 840,
+          "y": 740
+        },
+        {
+          "x": 540,
+          "y": 740
+        },
+        {
+          "x": 540,
+          "y": 760
+        }
+      ]
+    },
+    {
+      "id": "w9",
+      "from": "ntc1:GND",
+      "to": "uno:GND",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 780,
+          "y": 420
+        },
+        {
+          "x": 1020,
+          "y": 420
+        },
+        {
+          "x": 1020,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w10",
+      "from": "ntc1:VCC",
+      "to": "uno:5V",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 740,
+          "y": 420
+        },
+        {
+          "x": 460,
+          "y": 420
+        },
+        {
+          "x": 460,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w11",
+      "from": "ntc1:OUT",
+      "to": "uno:A0",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 760,
+          "y": 420
+        },
+        {
+          "x": 500,
+          "y": 420
+        },
+        {
+          "x": 500,
+          "y": 680
+        }
+      ]
+    },
+    {
+      "id": "w12",
+      "from": "pot1:1",
+      "to": "uno:GNDb",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 540,
+          "y": 600
+        }
+      ]
+    },
+    {
+      "id": "w13",
+      "from": "pot1:3",
+      "to": "uno:5V",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 580,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w14",
+      "from": "pot1:2",
+      "to": "uno:A1",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 560,
+          "y": 700
+        }
+      ]
+    },
+    {
+      "id": "w15",
+      "from": "relay1:GND",
+      "to": "uno:GNDc",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 380,
+          "y": 720
+        },
+        {
+          "x": 380,
+          "y": 620
+        }
+      ]
+    },
+    {
+      "id": "w16",
+      "from": "relay1:VCC",
+      "to": "uno:5V",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 340,
+          "y": 680
+        },
+        {
+          "x": 340,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w17",
+      "from": "relay1:IN",
+      "to": "uno:6",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 520,
+          "y": 700
+        },
+        {
+          "x": 520,
+          "y": 660
+        },
+        {
+          "x": 1100,
+          "y": 660
+        },
+        {
+          "x": 1100,
+          "y": 760
+        }
+      ]
+    },
+    {
+      "id": "w18",
+      "from": "bb1:tn1",
+      "to": "uno:GND",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 1100,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w19",
+      "from": "uno:7",
+      "to": "bb1:a10",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 1260,
+          "y": 740
+        }
+      ]
+    },
+    {
+      "id": "w20",
+      "from": "r3:1",
+      "to": "bb1:b10",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 1160,
+          "y": 460
+        },
+        {
+          "x": 1160,
+          "y": 700
+        },
+        {
+          "x": 1260,
+          "y": 700
+        }
+      ]
+    },
+    {
+      "id": "w21",
+      "from": "r3:2",
+      "to": "bb1:b6",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 1280,
+          "y": 460
+        },
+        {
+          "x": 1280,
+          "y": 780
+        },
+        {
+          "x": 1180,
+          "y": 780
+        }
+      ]
+    },
+    {
+      "id": "w22",
+      "from": "led1:A",
+      "to": "bb1:e6",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 1240,
+          "y": 600
+        },
+        {
+          "x": 1180,
+          "y": 600
+        }
+      ]
+    },
+    {
+      "id": "w23",
+      "from": "led1:C",
+      "to": "bb1:e5",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 1260,
+          "y": 480
+        },
+        {
+          "x": 1320,
+          "y": 480
+        },
+        {
+          "x": 1320,
+          "y": 640
+        },
+        {
+          "x": 1160,
+          "y": 640
+        }
+      ]
+    },
+    {
+      "id": "w24",
+      "from": "bb1:a5",
+      "to": "bb1:tn5",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 1160,
+          "y": 720
+        },
+        {
+          "x": 1140,
+          "y": 720
+        },
+        {
+          "x": 1140,
+          "y": 380
+        },
+        {
+          "x": 1180,
+          "y": 380
+        }
+      ]
+    },
+    {
+      "id": "w25",
+      "from": "uno:8",
+      "to": "bb1:a20",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 1240,
+          "y": 700
+        }
+      ]
+    },
+    {
+      "id": "w26",
+      "from": "r4:1",
+      "to": "bb1:b20",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 1460,
+          "y": 460
+        }
+      ]
+    },
+    {
+      "id": "w27",
+      "from": "r4:2",
+      "to": "bb1:b16",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 1580,
+          "y": 460
+        },
+        {
+          "x": 1580,
+          "y": 780
+        },
+        {
+          "x": 1380,
+          "y": 780
+        }
+      ]
+    },
+    {
+      "id": "w28",
+      "from": "led2:A",
+      "to": "bb1:e16",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 1540,
+          "y": 600
+        },
+        {
+          "x": 1380,
+          "y": 600
+        }
+      ]
+    },
+    {
+      "id": "w29",
+      "from": "led2:C",
+      "to": "bb1:e15",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 1560,
+          "y": 480
+        },
+        {
+          "x": 1360,
+          "y": 480
+        }
+      ]
+    },
+    {
+      "id": "w30",
+      "from": "bb1:a15",
+      "to": "bb1:tn15",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 1360,
+          "y": 800
+        },
+        {
+          "x": 1420,
+          "y": 800
+        }
+      ]
+    }
+  ],
+  "projects": {
+    "uno": {
+      "files": {
+        "sketch.ino": "#include <Wire.h>\n#include <LiquidCrystal_I2C.h>\n\nLiquidCrystal_I2C lcd(0x27, 16, 2);\n\n#define PIN_NTC   A0\n#define PIN_POT   A1\n#define PIN_RELAY 6\n#define PIN_LED_V 7\n#define PIN_LED_R 8\n#define PIN_BUZ   9\n#define PIN_BTN   2\n\nconst float BETA = 3950.0;   // coefficient de la NTC Wokwi\nconst float HYST = 2.0;      // hystérésis en °C\nbool alarme = false;\n\nfloat lireTemperature() {\n  long somme = 0;\n  for (int i = 0; i < 10; i++) { somme += analogRead(PIN_NTC); delay(5); }\n  float v = somme / 10.0;                       // moyenne anti-bruit\n  return 1 / (log(1 / (1023.0 / v - 1)) / BETA + 1 / 298.15) - 273.15;\n}\n\nvoid setup() {\n  Serial.begin(9600);\n  pinMode(PIN_RELAY, OUTPUT);\n  pinMode(PIN_LED_V, OUTPUT);\n  pinMode(PIN_LED_R, OUTPUT);\n  pinMode(PIN_BUZ, OUTPUT);\n  pinMode(PIN_BTN, INPUT_PULLUP);\n  lcd.init();\n  lcd.backlight();\n  lcd.print(\"Protection moteur\");\n  delay(1500);\n  lcd.clear();\n}\n\nvoid loop() {\n  float t = lireTemperature();\n  float seuil = 20.0 + analogRead(PIN_POT) * 60.0 / 1023.0;  // seuil 20 à 80 °C\n\n  // Déclenchement\n  if (!alarme && t >= seuil) alarme = true;\n  // Réarmement : température redescendue ET bouton appuyé\n  if (alarme && t < seuil - HYST && digitalRead(PIN_BTN) == LOW) alarme = false;\n\n  // Sorties\n  digitalWrite(PIN_RELAY, alarme ? LOW : HIGH);   // relais coupé en alarme\n  digitalWrite(PIN_LED_V, !alarme);\n  digitalWrite(PIN_LED_R, alarme);\n\n  if (alarme && (millis() / 300) % 2 == 0) tone(PIN_BUZ, 1000);\n  else noTone(PIN_BUZ);\n\n  // Affichage LCD\n  lcd.setCursor(0, 0);\n  lcd.print(\"T:\"); lcd.print(t, 1);\n  lcd.print(\"C S:\"); lcd.print(seuil, 0); lcd.print(\"C  \");\n  lcd.setCursor(0, 1);\n  lcd.print(alarme ? \"!! SURCHAUFFE !! \" : \"Etat: NORMAL     \");\n\n  Serial.print(t); Serial.print(\" ; \"); Serial.println(seuil);\n}"
+      },
+      "main": "sketch.ino"
+    }
+  }
+}
